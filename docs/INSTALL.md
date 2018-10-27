@@ -333,8 +333,10 @@ Here's a sample `lnd.conf` for `btcd` to get you started:
 ```
 [Application Options]
 debuglevel=trace
-debughtlc=true
 maxpendingchannels=10
+
+; Remove this option if you intend on using lnd on mainnet
+debughtlc=true
 
 [Bitcoin]
 bitcoin.active=1
@@ -345,4 +347,4 @@ Bitcoin chain. `lnd` also supports Litecoin testnet4 (but not both BTC and LTC
 at the same time), so when working with Litecoin be sure to set to parameters
 for Litecoin accordingly. For node configuration, the sections are called
 `[Btcd]`, `[Bitcoind]`, `[Neutrino]`, `[Ltcd]`, and `[Litecoind]` depending on
-which chain and node type you're using.
+which chain and node type you're using. You can explore a more detailed sample configuration file [here](https://github.com/lightningnetwork/lnd/blob/master/sample-lnd.conf).
